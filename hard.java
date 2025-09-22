@@ -267,3 +267,53 @@ class Q15{
     System.out.println(true);
   }
 }
+
+
+//Steps to Reduce Number to Zero
+class Q17{
+  public static void main(String[]a){
+    int n=14,steps=0;
+    while(n>0){n=n%2==0?n/2:n-1;steps++;}
+    System.out.println(steps);
+  }
+}
+
+
+//Student Grades (Multiple Inheritance via Interfaces)
+interface Marks{int total();}
+class Student implements Marks{
+  int[]m;Student(int[]x){m=x;}
+  public int total(){int s=0;for(int i:m)s+=i;return s;}
+  public static void main(String[]a){int[]m={90,91,92,93,92,93};Student s=new Student(m);
+    double avg=s.total()/6.0;System.out.println("Total="+s.total()+" Avg="+avg+" Grade="+(avg>75?"Dist":avg>60?"First":avg>50?"Second":avg>40?"Third":"Fail"));}
+}
+
+
+//Income Tax
+class Q19{
+  public static void main(String[]a){
+    int inc=600000,tax=0;
+    if(inc>1000000)tax=(int)((inc-1000000)*0.3+500000*0.2+250000*0.1);
+    else if(inc>500000)tax=(int)((inc-500000)*0.2+250000*0.1);
+    else if(inc>250000)tax=(int)((inc-250000)*0.1);
+    System.out.println("Tax="+tax);
+  }
+}
+
+
+//Electricity Bill
+class Q20{
+  public static void main(String[]a){
+    int prev=1200,curr=1600,u=curr-prev;double bill=0;
+    if(u>500){bill+=(u-500)*6;u=500;}if(u>200){bill+=(u-200)*4;u=200;}if(u>100){bill+=(u-100)*2.5;u=100;}bill+=u*1;
+    System.out.println("Bill="+bill);
+  }
+}
+
+
+//Inheritance (Vehicle Example)
+class Vehicle{String owner="Raj";}
+class Car extends Vehicle{String type="Car";}
+class Truck extends Vehicle{String type="Truck";}
+class Bike extends Vehicle{String type="Bike";}
+class Q21{public static void main(String[]a){Car c=new Car();System.out.println(c.owner+" owns "+c.type);}}
