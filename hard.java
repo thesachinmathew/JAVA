@@ -215,3 +215,55 @@ class Q10 {
 //Synchronization with Deposit/Withdraw 2
 class Acc{int bal=10000; synchronized void dep(int x){bal+=x;notify();} synchronized void wit(int x){while(bal<x)try{wait();}catch(Exception e){}bal-=x;System.out.println("Withdraw success, Bal:"+bal);}}
 class Q10{public static void main(String[]a){Acc ob=new Acc();new Thread(()->ob.wit(12000)).start();new Thread(()->ob.dep(3000)).start();}}
+
+
+//FizzBuzz
+class Q11{
+  public static void main(String[]a){
+    int n=10; // change input
+    for(int i=1;i<=n;i++)
+      System.out.println(i%15==0?"FizzBuzz":i%3==0?"Fizz":i%5==0?"Buzz":i+"");
+  }
+}
+
+
+//Common Elements in Two Arrays
+import java.util.*;
+class Q12{
+  public static void main(String[]a){
+    int[]x={1,2,3,4},y={2,4,5,6};
+    for(int i:x)for(int j:y)if(i==j)System.out.print(i+" ");
+  }
+}
+
+
+//Length of Last Word
+class Q13{
+  public static void main(String[]a){
+    String s="Hello World  ";
+    String[]w=s.trim().split(" ");
+    System.out.println(w[w.length-1].length());
+  }
+}
+
+
+//Roman to Integer
+import java.util.*;
+class Q14{
+  public static void main(String[]a){
+    Map<Character,Integer>m=Map.of('I',1,'V',5,'X',10,'L',50,'C',100,'D',500,'M',1000);
+    String s="MCMXCI";int ans=0;
+    for(int i=0;i<s.length();i++){int v=m.get(s.charAt(i)),n=i<s.length()-1?m.get(s.charAt(i+1)):0;ans+=v<n?-v:v;}
+    System.out.println(ans);
+  }
+}
+
+
+//Ransom Note
+class Q15{
+  public static void main(String[]a){
+    String r="aa",m="aab";
+    for(char c:r.toCharArray()){int i=m.indexOf(c);if(i==-1){System.out.println(false);return;}m=m.substring(0,i)+m.substring(i+1);}
+    System.out.println(true);
+  }
+}
