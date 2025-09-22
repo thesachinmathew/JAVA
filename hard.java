@@ -30,7 +30,7 @@ class Q1{
 }
 
 
-//Student Users 
+//Student Users    ***
 import java.util.*;
 class Q2 {
   public static void main(String[] args) {
@@ -80,7 +80,7 @@ class Q4 {
   }
 }
 
-//Perfect Squares with Digit Sum < 10
+//Perfect Squares with Digit Sum < 10  ***
 import java.util.*;
 class Q5 {
   static int digitSum(int x) {
@@ -143,7 +143,7 @@ class Q7 {
   }
 }
 
-//Bank Account 1
+//Bank Account 1  ***
 class Bank {
   String name, type;
   int acc;
@@ -217,7 +217,7 @@ class Acc{int bal=10000; synchronized void dep(int x){bal+=x;notify();} synchron
 class Q10{public static void main(String[]a){Acc ob=new Acc();new Thread(()->ob.wit(12000)).start();new Thread(()->ob.dep(3000)).start();}}
 
 
-//FizzBuzz
+//FizzBuzz   ***
 class Q11{
   public static void main(String[]a){
     int n=10; // change input
@@ -227,7 +227,7 @@ class Q11{
 }
 
 
-//Common Elements in Two Arrays
+//Common Elements in Two Arrays   ***
 import java.util.*;
 class Q12{
   public static void main(String[]a){
@@ -237,7 +237,7 @@ class Q12{
 }
 
 
-//Length of Last Word
+//Length of Last Word   ***
 class Q13{
   public static void main(String[]a){
     String s="Hello World  ";
@@ -247,7 +247,7 @@ class Q13{
 }
 
 
-//Roman to Integer
+//Roman to Integer   ***
 import java.util.*;
 class Q14{
   public static void main(String[]a){
@@ -269,7 +269,7 @@ class Q15{
 }
 
 
-//Steps to Reduce Number to Zero
+//Steps to Reduce Number to Zero   ***
 class Q17{
   public static void main(String[]a){
     int n=14,steps=0;
@@ -279,7 +279,7 @@ class Q17{
 }
 
 
-//Student Grades (Multiple Inheritance via Interfaces)
+//Student Grades (Multiple Inheritance via Interfaces)   ***
 interface Marks{int total();}
 class Student implements Marks{
   int[]m;Student(int[]x){m=x;}
@@ -289,7 +289,7 @@ class Student implements Marks{
 }
 
 
-//Income Tax
+//Income Tax   ***
 class Q19{
   public static void main(String[]a){
     int inc=600000,tax=0;
@@ -301,7 +301,7 @@ class Q19{
 }
 
 
-//Electricity Bill
+//Electricity Bill   ***
 class Q20{
   public static void main(String[]a){
     int prev=1200,curr=1600,u=curr-prev;double bill=0;
@@ -311,7 +311,7 @@ class Q20{
 }
 
 
-//Inheritance (Vehicle Example)
+//Inheritance (Vehicle Example)   ***
 class Vehicle{String owner="Raj";}
 class Car extends Vehicle{String type="Car";}
 class Truck extends Vehicle{String type="Truck";}
