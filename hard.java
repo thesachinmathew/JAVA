@@ -1,4 +1,4 @@
-//Convert Days + Day of Week
+//Convert Days + Day of Week 1
 import java.util.*;
 import java.time.*;
 class Q1 {
@@ -18,7 +18,19 @@ class Q1 {
   }
 }
 
-//Student Users
+//Convert Days + Day of Week  2
+import java.util.*;
+class Q1{
+  public static void main(String[]a){
+    Scanner sc=new Scanner(System.in);
+    int d=sc.nextInt();System.out.println("Years:"+d/365+" Weeks:"+(d%365)/7+" Days:"+(d%365)%7);
+    int day=sc.nextInt(),m=sc.nextInt(),y=sc.nextInt();
+    System.out.println(java.time.LocalDate.of(y,m,day).getDayOfWeek());
+  }
+}
+
+
+//Student Users 
 import java.util.*;
 class Q2 {
   public static void main(String[] args) {
@@ -89,7 +101,7 @@ class Q5 {
 }
 
 
-//Unique Permutations
+//Unique Permutations 1
 import java.util.*;
 class Q6 {
   static void perm(String s, String ans, Set<String> set) {
@@ -108,6 +120,14 @@ class Q6 {
     System.out.println(set);
   }
 }
+
+//Unique Permutations 2
+import java.util.*;
+class Q6{
+  static void perm(String s,String ans,Set<String>set){if(s.isEmpty()){set.add(ans);return;}for(int i=0;i<s.length();i++)perm(s.substring(0,i)+s.substring(i+1),ans+s.charAt(i),set);}
+  public static void main(String[]a){Scanner sc=new Scanner(System.in);String s=sc.next();Set<String>set=new TreeSet<>();perm(s,"",set);System.out.println(set);}
+}
+
 
 // Number and Square Array
 import java.util.*;
